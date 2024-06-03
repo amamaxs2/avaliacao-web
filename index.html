@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Portal de notícias do IBGE</h1>
+        <form id="pesquisa">
+            <input type="text" placeholder="Buscar notícia por termo">
+            <button type="submit">🔍</button>
+        </form>
+
+        <button class="edit-btn" title="Filtrar" onclick="abreTelaDeFiltro()">
+            <svg width="20" height="20" fill="#f0f0f0" viewBox="0 0 80 90" focusable="false"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="m 0,0 30,45 0,30 10,15 0,-45 30,-45 Z"></path>
+            </svg>
+        </button>
+    </header>
+    <dialog>
+        <form>
+
+        </form>
+    </dialog>
+    <main>
+        
+    </main>
+
+    <footer>
+        <p>&copy; Prova do segundo bimestre - Programação WEB</p>
+    </footer>
+
+    <dialog id="filtroDialog">
+        <button class="btn-close" onclick="fechaTelaDeFiltro()">✖</button>
+        <form id="filtroForm" method="dialog">
+            <div>
+                <label>Tipo:</label>
+                <select name="tipo" id="tipo" class="btn-input">
+                    <option value="">Selecione</option>
+                    <option value="noticia">Notícia</option>
+                    <option value="release">Release</option>
+                </select>
+            </div>
+            <div>
+                <label>Quantidade:</label>
+                <select name="quantidade" id="quantidade" class="btn-input">
+                    <option value="5">5</option>
+                    <option selected value="10">10</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div>
+                <label>De:</label>
+                <input type="date" id="dtIni" class="btn-input">
+            </div>
+            <div>
+                <label>Até</label>
+                <input type="date" id="dtFim" class="btn-input">
+            </div>
+        </form>
+        <button class="btn-apply" onclick="getFilter()" type="submit">Aplicar</button>
+    </dialog>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

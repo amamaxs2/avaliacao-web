@@ -1,0 +1,129 @@
+header,
+footer,
+#pesquisa {
+    background-color: #4682b4;
+    text-align: center;
+}
+
+main {
+    background-color: #f0f0f0;
+}
+
+header h1,
+footer p {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="text"] {
+    padding: 10px 40px 10px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 500px;
+    box-sizing: border-box;
+}
+
+header button {
+    position: absolute;
+    right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: grid;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    height: 20vh;
+}
+
+footer {
+    height: 10vh;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+dialog form {
+    display: grid;
+    grid-template-columns: 15em 15em;
+}
+
+dialog{
+    margin: auto;
+    position: relative;
+    width: 31.5vw;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 5px;
+    border-width: 1px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+dialog[open]{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+dialog div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn-input {
+    width: 15em;
+    height: 2.5em;
+    border-radius: 5px;
+    border: 1px solid#c5c5c5;
+}
+
+.btn-close {
+    font-weight: bold;
+    font-size: 1.5em;
+    position: absolute;
+    background: none;
+    width: 2em;
+    height: 2em;
+    right: 1px;
+    top: 1px;
+    border: none;
+}
+
+.btn-apply {
+    width: 33em;
+    height: 2.5em;
+    border-radius: 5px;
+    background-color: #4682b4;
+    color: #f0f0f0;
+    border: 1px solid#c5c5c5;
+}
+
+button {
+    cursor: pointer;
+}
+
+.tela-presente {
+    background-color: #4682b4;
+}
+
+ul li {
+    list-style-type: none;
+}
+

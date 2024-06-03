@@ -37,7 +37,7 @@ async function getNewsData() {
         const ate = urlSearchParams.get("ate");
         const page = urlSearchParams.get("page");
 
-        url = `http://servicodados.ibge.gov.br/api/v3/noticias/?qtd=${qtd}`
+        url = `https://servicodados.ibge.gov.br/api/v3/noticias/?qtd=${qtd}`
 
         if (tipo) {
             url += `&tipo=${tipo}`;

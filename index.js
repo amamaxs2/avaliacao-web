@@ -127,6 +127,7 @@ function fechaTelaDeFiltro() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    getFilter()
     getNewsData()
     
 })

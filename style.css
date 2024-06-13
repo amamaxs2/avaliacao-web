@@ -87,6 +87,28 @@ dialog div {
     justify-content: center;
 }
 
+ul {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    list-style: none;
+}
+
+li img{
+    max-width: 380px;
+    max-height: 380px;
+}
+
+li div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
 .btn-input {
     width: 15em;
     height: 2.5em;
@@ -121,9 +143,33 @@ button {
 
 .tela-presente {
     background-color: #4682b4;
+    color: white;
 }
 
 ul li {
     list-style-type: none;
+}
+
+.num-filtro {
+    background-color: white;
+    border-radius: 10px;
+    color: #4682b4;
+}
+
+.pagination-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pagination-btn li button {
+    border-radius: 3px;
+    border-color: blue;
+    color: blue;
+}
+
+.pagination-btn li button:hover {
+    background-color: rgb(204, 204, 255);
+    color: blue;
 }
 

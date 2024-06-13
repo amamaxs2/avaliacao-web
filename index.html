@@ -12,8 +12,8 @@
     <header>
         <h1>Portal de notícias do IBGE</h1>
         <form id="pesquisa">
-            <input type="text" placeholder="Buscar notícia por termo">
-            <button type="submit">🔍</button>
+            <input type="text" id="busca" placeholder="Buscar notícia por termo">
+            <button type="submit" onclick="getFilter()">🔍</button>
         </form>
 
         <button class="edit-btn" title="Filtrar" onclick="abreTelaDeFiltro()">

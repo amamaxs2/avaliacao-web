@@ -7,6 +7,8 @@ footer,
 
 main {
     background-color: #f0f0f0;
+    height: 100ch;
+    height: auto;
 }
 
 header h1,
@@ -58,33 +60,33 @@ form {
     position: relative;
 }
 
-dialog form {
+dialog form{
     display: grid;
-    grid-template-columns: 15em 15em;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    gap: 10px
 }
 
-dialog {
+dialog{
     margin: auto;
     position: relative;
-    width: 31.5vw;
+    width: 50vw;
     max-width: 600px;
     padding: 20px;
     border-radius: 5px;
     border-width: 1px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-dialog[open] {
+dialog[open]{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 15px;
 }
 
-dialog div {
+dialog div{
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 ul {
@@ -110,7 +112,7 @@ li div {
 
 
 .btn-input {
-    width: 15em;
+    width: inherit;
     height: 2.5em;
     border-radius: 5px;
     border: 1px solid#c5c5c5;
@@ -129,7 +131,6 @@ li div {
 }
 
 .btn-apply {
-    width: 33em;
     height: 2.5em;
     border-radius: 5px;
     background-color: #4682b4;
@@ -227,4 +228,13 @@ li button {
 
 .div4 {
     grid-area: 3 / 2 / 4 / 4;
+}
+
+@media (max-width: 760px) {
+    dialog form{
+        display: grid;
+        grid-template-columns: 40vw;
+        justify-content: space-around;
+        gap: 10px
+    }
 }

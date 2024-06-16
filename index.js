@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     getFilter();
-    getNewsData();
 });
 
 function getFilter() {
@@ -26,6 +25,7 @@ function getFilter() {
     window.history.pushState({}, "", url);
 
     getNewsData();
+    fechaTelaDeFiltro();
 }
 
 async function getNewsData() {
@@ -107,7 +107,7 @@ async function getNewsData() {
             } else if (diferencaDias === 1) {
                 publicado = 'ontem';
             } else {
-                publicado = diferencaDias + " dias atras";
+                publicado = "há " + diferencaDias + " dias";
             }
 
             p.textContent = publicado;

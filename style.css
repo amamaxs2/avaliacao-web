@@ -63,7 +63,7 @@ dialog form {
     grid-template-columns: 15em 15em;
 }
 
-dialog{
+dialog {
     margin: auto;
     position: relative;
     width: 31.5vw;
@@ -71,10 +71,10 @@ dialog{
     padding: 20px;
     border-radius: 5px;
     border-width: 1px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-dialog[open]{
+dialog[open] {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,12 +96,12 @@ ul {
     list-style: none;
 }
 
-li img{
+li img {
     max-width: 380px;
     max-height: 380px;
 }
 
-li div{
+li div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -146,6 +146,7 @@ button {
     color: white;
 }
 
+
 ul li {
     list-style-type: none;
 }
@@ -156,7 +157,7 @@ ul li {
     color: #4682b4;
 }
 
-.pagination-btn{
+.pagination-btn {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -173,3 +174,57 @@ ul li {
     color: blue;
 }
 
+#qtdeFiltro {
+    position: absolute;
+    border-radius: 50%;
+    width: 19px;
+    height: 15px;
+    margin-left: 11px;
+    margin-top: -29px;
+}
+
+li img {
+    max-width: 380px;
+    max-height: 380px;
+}
+
+li div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+li button {
+    width: 100%;
+    background-color: #c5c5c5;
+    border: none;
+    border-radius: 6px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.parent {
+    display: grid;
+    width: 60vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 0px;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 4 / 2;
+}
+
+.div2 {
+    grid-area: 1 / 2 / 2 / 4;
+}
+
+.div3 {
+    grid-area: 2 / 2 / 3 / 4;
+}
+
+.div4 {
+    grid-area: 3 / 2 / 4 / 4;
+}

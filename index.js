@@ -35,7 +35,7 @@ async function getNewsData() {
         }
 
         const main = document.querySelector('main');
-        const header = document.querySelector('header button')
+        const header = document.querySelector('#qtdeFiltro')
         const ul = document.createElement('ul');
         const urlSearchParams = new URLSearchParams(location.search);
         const qtd = urlSearchParams.get("qtd");
@@ -71,9 +71,9 @@ async function getNewsData() {
         existingPs.forEach(p => p.remove());
 
         const p = document.createElement('p');
-        p.textContent = qtdeFiltro;  
+        p.textContent = qtdeFiltro;
         p.className = "num-filtro";
-        header.appendChild(p);
+        header.append(p);
         main.innerHTML = '';
 
         const data = await fetch(url);
@@ -91,11 +91,10 @@ async function getNewsData() {
 
             let dataAtual = new Date();
 
-            const dataPostagemArray = jsonData.items[cont].data_publicacao.split(' ');
+            const dataPostagemArray = jsonData.items[cont].data_publicacao.split('T');
             const dataPostagemStr = dataPostagemArray[0];
 
-            const [dia, mes, ano] = dataPostagemStr.split('/').map(Number);
-            const dataPostagem = new Date(ano, mes - 1, dia);
+            const dataPostagem = new Date(dataPostagemStr);
 
             const diferencaMilissegundos = dataAtual - dataPostagem;
 
@@ -120,15 +119,29 @@ async function getNewsData() {
             button.addEventListener('click', () => {
                 window.open(jsonData.items[cont].link);
             });
+            li.className = "parent"
             li.appendChild(img);
             li.innerHTML = `
-                <img src="${urlImg}"/>
-                <h2>${jsonData.items[cont].titulo}</h2>
-                <p>${jsonData.items[cont].introducao}</p>
-                <p>#${jsonData.items[cont].editorias}</p>
-                <p>Publicado ${publicado}</p>
-            `;
+                <img class="div1" src="${urlImg}"/>
+                <h2 class="div2">${jsonData.items[cont].titulo}</h2>
+                <p class="div3">${jsonData.items[cont].introducao}</p>
+                `;
             ul.appendChild(li);
+            const div = document.createElement("div")
+            div.className = "div4"
+            const p1 = document.createElement("p")
+            p1.textContent = `#${jsonData.items[cont].editorias}`
+            const p2 = document.createElement("p")
+            p2.textContent = `Publicado ${publicado}`
+            const bt = document.createElement('button')
+            bt.textContent = "Leia mais"
+            bt.addEventListener("click", () => {
+                window.open(jsonData.items[cont].link)
+            })
+            div.appendChild(p1)
+            div.appendChild(p2)
+            div.appendChild(bt)
+            li.appendChild(div)
         }
 
         main.appendChild(ul);
